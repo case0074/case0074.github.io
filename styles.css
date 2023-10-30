@@ -1,3 +1,26 @@
 body {
     background-color: red;
+    font-family: Arial, sans-serif;
+}
+
+.navigation {
+    display: flex;
+}
+
+.nav-box {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.content {
+    padding: 50px;
+    color: white;
+    display: none;
+}
+
+.content.active {
+    display: block;
 }
