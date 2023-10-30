@@ -1,62 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inventory Management System</title>
-    <style>
-    </style>
+    <title>Website Navigation</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <header>
-        <h1>Inventory Management System</h1>
-    </header>
+    <div class="navigation">
+        <div class="nav-box" id="section1">
+            <a href="#section1">Section 1</a>
+        </div>
+        <div class="nav-box" id="section2">
+            <a href="#section2">Section 2</a>
+        </div>
+        <div class="nav-box" id="section3">
+            <a href="#section3">Section 3</a>
+        </div>
+    </div>
 
-    <section>
-        <h2>Product List</h2>
-        <table>
-            <tr>
-                <th>Product ID</th>
-                <th>Product Name</th>
-                <th>Quantity</th>
-                <th>Price</th>
-            </tr>
-            <!-- Use a loop to display products dynamically -->
-            <tr>
-                <td>1</td>
-                <td>Product A</td>
-                <td>10</td>
-                <td>$50.00</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Product B</td>
-                <td>20</td>
-                <td>$30.00</td>
-            </tr>
-            <!-- Add more rows as needed -->
-        </table>
-    </section>
+    <div class="content" id="section1">
+        <h1>Section 1</h1>
+        <p>Content for Section 1 goes here.</p>
+    </div>
 
-    <section>
-        <h2>Add New Product</h2>
-        <form>
-            <label for="productName">Product Name:</label>
-            <input type="text" id="productName" name="productName" required><br><br>
-            <label for="quantity">Quantity:</label>
-            <input type="number" id="quantity" name="quantity" required><br><br>
-            <label for="price">Price:</label>
-            <input type="text" id="price" name="price" required><br><br>
-            <input type="submit" value="Add Product">
-        </form>
-    </section>
+    <div class="content" id="section2">
+        <h1>Section 2</h1>
+        <p>Content for Section 2 goes here.</p>
+    </div>
 
-    <footer>
-        <p>&copy; da baby </p>
-    </footer>
+    <div class="content" id="section3">
+        <h1>Section 3</h1>
+        <p>Content for Section 3 goes here.</p>
+    </div>
 </body>
-
 </html>
