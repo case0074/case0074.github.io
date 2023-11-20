@@ -39,9 +39,10 @@ h1{
 
 .nav-items li{
   float: left;
+  
 }
 nav a:hover {
-  color: #fff;
+  color: #000000;
 }
 
 .hero {
@@ -101,13 +102,29 @@ nav a:hover {
 table{
   width: 100%;
 }
-th{
-   font-weight: bold;
-}
-td{
+
+.wrapper-main td{
+  padding: 12px 15px;
   border-collapse: separate;
   border-radius: 20px;
   padding: 20px;
   border: 1px solid #000;
   text-align-last: center;
+}
+.wrapper-main th{
+  border: 2px solid #000;
+  position: sticky;
+  top: 0px;  
+  background-color: #bd2525;
+  font-weight: bold;
+}
+.wrapper-main{
+  max-height: 300px;
+  overflow-y: scroll;
+  margin: 20px;
+}
+
+th,td{
+  border-collapse: separate;
+  border-spacing: 0px;
 }

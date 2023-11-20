@@ -28,6 +28,8 @@
             <div class="column-right">
             <img src="Ou Logo.png" alt="illustration"
                 class="hero-image"
+                />
+
             </div>
             </section>
             <section class="wrapper-main">
@@ -44,39 +46,44 @@
                 </table>
              </section>
              <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                   fetch('inventory.txt')
-                      .then(response => response.text())
-                      .then(data => {
-                         const dataArray = data.split('\n').map(line => line.split(','));
-             
-                         const tableBody = document.getElementById('dataContainer');
-             
-                         dataArray.forEach(item => {
-                            const [category, name, quantity, expiration] = item;
-                            const row = document.createElement('tr');
-             
-                            const categoryCell = document.createElement('td');
-                            categoryCell.textContent = category;
-             
-                            const nameCell = document.createElement('td');
-                            nameCell.textContent = name;
-             
-                            const quantityCell = document.createElement('td');
-                            quantityCell.textContent = quantity;
-             
-                            const expirationCell = document.createElement('td');
-                            expirationCell.textContent = expiration;
-             
-                            row.appendChild(categoryCell);
-                            row.appendChild(nameCell);
-                            row.appendChild(quantityCell);
-                            row.appendChild(expirationCell);
-             
-                            tableBody.appendChild(row);
-                         });
-                      });
-                });
-             </script>
+               function updateTable() {
+                  fetch('inventory.txt')
+                     .then(response => response.text())
+                     .then(data => {
+                        const dataArray = data.split('\n').map(line => line.split(','));
+            
+                        const tableBody = document.getElementById('dataContainer');
+                        tableBody.innerHTML = ''; // Clear existing content
+            
+                        dataArray.forEach(item => {
+                           const [category, name, quantity, expiration] = item;
+                           const row = document.createElement('tr');
+            
+                           const categoryCell = document.createElement('td');
+                           categoryCell.textContent = category;
+            
+                           const nameCell = document.createElement('td');
+                           nameCell.textContent = name;
+            
+                           const quantityCell = document.createElement('td');
+                           quantityCell.textContent = quantity;
+            
+                           const expirationCell = document.createElement('td');
+                           expirationCell.textContent = expiration;
+            
+                           row.appendChild(categoryCell);
+                           row.appendChild(nameCell);
+                           row.appendChild(quantityCell);
+                           row.appendChild(expirationCell);
+            
+                           tableBody.appendChild(row);
+                        });
+            
+                        setTimeout(updateTable, 10000); // Repeat every 10 seconds
+                     });
+               }
+            
+               document.addEventListener('DOMContentLoaded', updateTable);
+            </script>
 </body>
 </html>
