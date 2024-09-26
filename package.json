@@ -1,17 +1,18 @@
 {
     "name": "three",
+    "private": false,
     "version": "0.168.0",
-    "description": "JavaScript 3D library",
     "type": "module",
-    "main": "/three/three.cjs",
-    "module": "/three/three.module.js",
-    "exports": {
-      ".": {
-        "import": "/three/three.module.js",
-        "require": "/three/three.cjs"
-      }
-     
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "host": "vite --host"
+    },
+    "devDependencies": {
+        "vite": "^4.5.5"
+    },
+    "dependencies": {
+        "three": "^0.168.0"
     }
-   
- 
-  }
+}
