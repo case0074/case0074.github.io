@@ -3,12 +3,12 @@
     "version": "0.168.0",
     "description": "JavaScript 3D library",
     "type": "module",
-    "main": "./three/three.cjs",
-    "module": "./three/three.module.js",
+    "main": "/three/three.cjs",
+    "module": "/three/three.module.js",
     "exports": {
       ".": {
-        "import": "./three/three.module.js",
-        "require": "./three/three.cjs"
+        "import": "/three/three.module.js",
+        "require": "/three/three.cjs"
       }
      
     }
