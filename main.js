@@ -3,8 +3,8 @@
         Imports
 =*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*= 
 */
-import './style.css';
-import * as THREE from '/three';
+import 'style.css';
+import * as THREE from 'three';
 import { OrbitControls } from '/three/OrbitControls.js';
 
 
