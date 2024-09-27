@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon_white.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./style.css" />
+
     <!--  
           Google Fonts
     ---->
@@ -16,6 +16,9 @@
           font-family: 'Inter', sans-serif;
     ---->
     <title>ThreeJS-Template</title>
+    <script type="importmap">
+
+</script>
   </head>
   <body>
     <div id="app">
@@ -31,86 +34,6 @@
       </div>
     </div>
     <canvas class="webgl"></canvas>
-
-    <!-- Importing three.js and OrbitControls from CDN -->
-    <script type="module">
-      import * as THREE from '/three/three.module.js';
-      import { OrbitControls } from '/three/OrbitControls.js';
-
-
-      const canvas = document.querySelector('canvas.webgl');
-      const scene = new THREE.Scene();
-
-      // Mesh
-      let radius = window.innerWidth <= 480 ? 0.8 : 1;
-      const geometry = new THREE.SphereGeometry(radius, 32, 16);
-      const material = new THREE.MeshPhongMaterial({ color: "#7444ff", wireframe: true });
-      const mesh = new THREE.Mesh(geometry, material);
-      scene.add(mesh);
-
-      // Light
-      const ambientLight = new THREE.AmbientLight(0x404040);
-      scene.add(ambientLight);
-      const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-      scene.add(directionalLight);
-      const hemisphereLight = new THREE.HemisphereLight(0x7444ff, 0xff00bb, 0.5);
-      scene.add(hemisphereLight);
-      const pointLight = new THREE.PointLight(0x7444ff, 1, 100);
-      pointLight.position.set(0, 3, 4);
-      scene.add(pointLight);
-
-      // Sizes
-      const sizes = {
-        width: window.innerWidth,
-        height: window.innerHeight,
-      };
-
-      window.addEventListener('resize', () => {
-        sizes.width = window.innerWidth;
-        sizes.height = window.innerHeight;
-
-        // Update camera
-        camera.aspect = sizes.width / sizes.height;
-        camera.updateProjectionMatrix();
-
-        // Update renderer
-        renderer.setSize(sizes.width, sizes.height);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-      });
-
-      // Camera
-      const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
-      camera.position.z = 3;
-      scene.add(camera);
-
-      // Renderer
-      const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
-      renderer.setSize(sizes.width, sizes.height);
-
-      // OrbitControls
-      const controls = new OrbitControls(camera, canvas);
-      controls.enableDamping = true;
-
-      // Animation Frame
-      const clock = new THREE.Clock();
-      let previousTime = 0;
-      const tick = () => {
-        const elapsedTime = clock.getElapsedTime();
-        const deltaTime = elapsedTime - previousTime;
-        previousTime = elapsedTime;
-
-        // Update mesh rotation
-        mesh.rotation.x += deltaTime * 0.7;
-        mesh.rotation.y += deltaTime * 0.7;
-        mesh.rotation.z += deltaTime * 0.7;
-
-        // Update controls
-        controls.update();
-
-        renderer.render(scene, camera);
-        window.requestAnimationFrame(tick);
-      };
-      tick();
-    </script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
