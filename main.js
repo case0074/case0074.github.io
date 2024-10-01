@@ -7,7 +7,7 @@
 i want this to work more than nything sos */
 import './style.css'
 import * as THREE from 'three';
-import { OrbitControls } from './three/OrbitControls.js';
+import { OrbitControls } from './src/OrbitControls.js';
 
 console.log(`                                                       
 m      #                                     "         
