@@ -6,8 +6,8 @@
 /*
 i want this to work more than nything sos */
 import './style.css'
-import * as THREE from './build/three.module';
-import { OrbitControls } from './build/OrbitControls';
+import * as THREE from './three';
+import { OrbitControls } from './three/OrbitControls.js';
 
 console.log(`                                                       
 m      #                                     "         
