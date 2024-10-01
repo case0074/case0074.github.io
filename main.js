@@ -6,7 +6,7 @@
 /*
 i want this to work more than nything sos */
 import './style.css'
-import * as THREE from 'three';
+import * as THREE from './src/three.cjs';
 import { OrbitControls } from './src/OrbitControls.js';
 
 console.log(`                                                       
