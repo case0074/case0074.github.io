@@ -5,9 +5,9 @@
 */
 /*
 i want this to work more than nything sos */
-
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.168.0/build/three.module.min.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.168.0/examples/jsm/controls/OrbitControls.js';
+import './style.css'
+import * as THREE from './build/three.module';
+import { OrbitControls } from './build/OrbitControls';
 
 console.log(`                                                       
 m      #                                     "         
