@@ -190,6 +190,10 @@ const animationTimeline = () => {
         x: 25,
         y: -25,
         rotationZ: -45,
+        onStart: function () {
+          const audio = document.getElementById("endSong");
+          if (audio) audio.play().catch(() => {});
+        },
       },
       "-=2"
     )
